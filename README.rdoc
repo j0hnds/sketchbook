@@ -1,0 +1,9 @@
+== Welcome to my Arduino Sketchbook
+
+The repository is a compilation of the Arduino sketchs I've implemented so far. 
+
+Pretty simple stuff at this point. The goal is implement more complex sketches as time goes on.
+
+Enjoy.
+
+Dave
