@@ -1,7 +1,11 @@
+// -*- c -*-
 // This sketch is to read from the galvanized
 // nail moisture meter and light the LED with the
 // output. We will be writing the output of the 
 // A0 pin (moisture meter) to the LED (D1)
+// 
+// See the schematic in the sketchbook for how
+// to wire this up.
 
 const int LED = 9;
 const int METER = 0; // Analog pin 0
