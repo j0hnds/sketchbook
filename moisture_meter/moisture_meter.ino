@@ -22,6 +22,9 @@ void setup() {
 void loop() {
   val = analogRead(METER);
   
+  // This thing just spews the value read from the analog pin
+  // out onto the serial port. Each value is separated by a
+  // newline. 
   Serial.println(val);
   
   analogWrite(LED, val / 4);
