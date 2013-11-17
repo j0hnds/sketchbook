@@ -232,7 +232,7 @@ void calibrateRotationRate(int sensor, int angle) {
      Serial.print(" current level = ");
      Serial.print(value);
      Serial.print(" >= ");
-     Serial.print(irSensorEdge[sensor]);
+     Serial.println(irSensorEdge[sensor]);
    }
    if (value >= irSensorEdge[sensor]) {
      result = true; // Edge detected (higher value means less reflected)
