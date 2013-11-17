@@ -12,7 +12,8 @@
 #include "RobotMotor.h"
 
 
-const int differential = 0; // % faster left motor turns compared to right  
+// This - by default was 0. Changed it to 5 after calibration.
+const int differential = 5; // % faster left motor turns compared to right  
 
 // tables hold time in ms to rotate robot 360 degrees at various speeds 
 // this enables conversion of rotation angle into timed motor movement 
