@@ -29,19 +29,19 @@ void loop() {
   // Code for roaming around and avoiding obstacles
   if (lookForObstacle(OBST_FRONT_EDGE)) {
     Serial.println("both sensors detected edge");
-    timedMove(MOV_BACK, 300);
+    timedMove(MOV_BACK, 500);
     moveRotate(120);
     while (lookForObstacle(OBST_FRONT_EDGE)) {
       moveStop(); // Stop motors if still over cliff
     }
   } else if (lookForObstacle(OBST_LEFT_EDGE)) {
     Serial.println("left sensor detected edge");
-    timedMove(MOV_BACK, 100);
-    moveRotate(30);
+    timedMove(MOV_BACK, 500);
+    moveRotate(60);
   } else if (lookForObstacle(OBST_RIGHT_EDGE)) {
     Serial.println("right sensor detected edge");
-    timedMove(MOV_BACK, 100);
-    moveRotate(-30);
+    timedMove(MOV_BACK, 500);
+    moveRotate(-60);
   } else {
     moveSetSpeed(MIN_SPEED);
     moveForward();
