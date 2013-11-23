@@ -28,7 +28,7 @@ void loop() {
 /***********************************************************
  Line Sensor code
 ***********************************************************/
-int damping = 1; // 1 is most sensitive, range 1 to 1023
+int damping = 5; // 1 is most sensitive, range 1 to 1023
 
 void lineSenseBegin() {
   // Nothing yet
@@ -43,7 +43,7 @@ int lineSense() {
   int leftSense = centerVal - leftVal;
   int rightSense = rightVal - centerVal;
   
-  int drift = rightVal - leftVal;
+  int drift = rightSense - leftSense; // rightVal - leftVal;
   
   Serial.print("L,C,R=");
   Serial.print(leftVal);
