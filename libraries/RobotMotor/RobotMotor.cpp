@@ -42,7 +42,9 @@ const int SPEED_TABLE_INTERVAL = 10; // each table entry is 10% faster speed
 const int NBR_SPEEDS =  1 + (100 - MIN_SPEED)/ SPEED_TABLE_INTERVAL;
  
 int speedTable[NBR_SPEEDS]  =  {60,   70,   80,   90,  100}; // speeds  
-int rotationTime[NBR_SPEEDS] = {5500, 3300, 2400, 2000, 1750}; // time
+// Adding 2200 seconds to everything
+int rotationTime[NBR_SPEEDS] = {7700, 5500, 4600, 4200, 3950}; // time
+// int rotationTime[NBR_SPEEDS] = {5500, 3300, 2400, 2000, 1750}; // time
 
 AF_DCMotor motors[] = {
     AF_DCMotor(4, MOTOR34_1KHZ), // left front is Motor #4 
