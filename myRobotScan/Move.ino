@@ -234,8 +234,9 @@ void timedMove(int direction, int duration) {
 */
 void movingDelay(long duration) {
   long startTime = millis();
-
-  while (millis() - startTime < duration) {
+  long elapsedTime = 0;
+  
+  while (elapsedTime < duration) {
     // function in Look module checks for obstacle in direction of movement 
     if (! isPathClear()) { 
       if (moveState != MOV_ROTATE) {
@@ -244,6 +245,7 @@ void movingDelay(long duration) {
 	moveBrake(); 
       }
     }  
+    elapsedTime = millis() - startTime;
   }  
 }
 
