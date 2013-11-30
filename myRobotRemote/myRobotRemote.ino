@@ -12,6 +12,7 @@
 #include "robotDefines.h"  // global defines
 
 const byte irReceivePin = A3; // analog pin 3
+const int aBatteryMonitorPin = 4; // Analog pin 4
 
 /**
    Setup runs at startup and is used configure pins and init system variables.
@@ -22,6 +23,7 @@ void setup() {
   
   lookBegin();  
   moveBegin(); 
+  batteryBegin(aBatteryMonitorPin, LED_PIN);
   remoteBegin(irReceivePin);  // added Remote tab
  
   moveSetSpeed(MIN_SPEED + 10) ;  // Run at 10% above minimum speed   
@@ -30,4 +32,5 @@ void setup() {
 
 void loop() {
   remoteService();
+  batteryCheck();
 }
